@@ -1,8 +1,17 @@
 import { useState } from "react";
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ChatPage from "./pages/ChatPage";
 function App() {
-  return <h1>ssup</h1>;
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/chats" element={<ChatPage />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
